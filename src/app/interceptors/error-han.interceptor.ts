@@ -9,8 +9,6 @@ import { Observable, catchError, of } from 'rxjs';
 
 @Injectable()
 export class ErrorHanInterceptor implements HttpInterceptor {
-  constructor() {}
-
   intercept(
     request: HttpRequest<unknown>,
     next: HttpHandler

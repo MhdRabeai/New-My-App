@@ -7,18 +7,18 @@ import { Injectable } from '@angular/core';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
   addEmployee(data: any) {
-    return this.http.post('http://localhost:3000/employees', data);
+    return this.http.post('https://json-server-avob.onrender.com/employees', data);
   }
   getEmployees() {
-    return this.http.get('http://localhost:3000/employees');
+    return this.http.get('https://json-server-avob.onrender.com/employees');
   }
   getEmployee(id: any) {
-    return this.http.get(`http://localhost:3000/employees/${id}`);
+    return this.http.get(`https://json-server-avob.onrender.com/employees/${id}`);
   }
   deleteEmployees(id: number) {
-    return this.http.delete(`http://localhost:3000/employees/${id}`);
+    return this.http.delete(`https://json-server-avob.onrender.com/employees/${id}`);
   }
   updateEmployee(id: number, data: any) {
-    return this.http.put(`http://localhost:3000/employees/${id}`, data);
+    return this.http.put(`https://json-server-avob.onrender.com/employees/${id}`, data);
   }
 }
